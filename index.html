@@ -1,0 +1,87 @@
+<!-- made by Timo Perzi -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CarFinder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="filter">
+      <label for="brand">Marke:</label>
+      <input type="text" id="brand" name="brand" /><br /><br />
+
+      <label for="type">Fahrzeugtyp:</label>
+      <input type="text" id="type" name="type" /><br /><br />
+
+      <label for="keyword">Suchbegriff:</label>
+      <input type="text" id="keyword" name="keyword" /><br /><br />
+
+      <label for="mileage">Kilometerstand bis:</label>
+      <input type="text" id="mileage" name="mileage" /><br /><br />
+
+      <label for="price">Preis bis:</label>
+      <input type="text" id="price" name="price" /><br /><br />
+
+      <label for="year">EZ ab:</label>
+      <input type="text" id="year" name="year" /><br /><br />
+
+      <label for="power">Leistung bis:</label>
+      <input type="text" id="power" name="power" /><br /><br />
+
+      <div>
+        <label for="fuel">Kraftstoff:</label>
+        <input type="checkbox" id="benzin" name="benzin" value="False" />
+        <label for="benzin">Benzin</label>
+        <input type="checkbox" id="diesel" name="diesel" value="False" />
+        <label for="diesel">Diesel</label>
+
+        <input type="checkbox" id="elektro" name="elektro" value="False" />
+        <label for="elektro">Elektrisch</label>
+        <input type="checkbox" id="hybrid" name="hybrid" value="False" />
+        <label for="hybrid">Hybrid</label>
+      </div>
+
+      <div>
+        <label for="extras">Extras:</label>
+        <input
+          type="checkbox"
+          id="heated_seats"
+          name="heated_seats"
+          value="False"
+        />
+        <label for="heated_seats">Sitzheizung</label>
+        <input
+          type="checkbox"
+          id="navigation"
+          name="navigation"
+          value="False"
+        />
+        <label for="navigation">Navigation</label>
+      </div>
+      <button id="search-button" onclick="filter()">Autos finden</button>
+    </div>
+    <div>
+      <label for="Json">Json:</label>
+      <div class="container">
+        <div class="box" id="box"></div>
+      </div>
+      <button id="copy-btn" onclick="copyFunction()">Copy</button>
+    </div>
+
+    <div>
+      <h2>Datenbank</h2>
+      <label for="json-input">Enter JSON data:</label>
+      <input type="text" id="json-input" name="json-input" />
+      <button onclick="renderCars()">Example</button>
+    </div>
+    <div>
+      <h3></h3>
+    </div>
+    <div class="image-container">
+      <div class="scrollable-images"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
